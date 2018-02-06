@@ -21,6 +21,10 @@ export class NewIncomeModalPage {
     }
   }
 
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+
   submitNewIncome() {
     if (
       this.newIncome.name &&

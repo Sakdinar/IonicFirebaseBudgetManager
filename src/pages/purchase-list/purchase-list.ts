@@ -33,6 +33,7 @@ export class PurchaseListPage {
 
     this.transactions = this.navParams.data.transactions.filter(t => {
       if (t.date.split('-')[1] == thisMonth) {
+        if (t.type == 'expense') { t.amount = t.amount * -1 }
         return t;
       }
     });

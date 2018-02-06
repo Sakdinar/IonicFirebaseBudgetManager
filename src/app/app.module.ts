@@ -10,6 +10,7 @@ import { MainPage } from '../pages/main/main';
 import { SignInPage } from '../pages/sign-in/sign-in';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { SetBudgetPage } from '../pages/set-budget/set-budget';
+import { SetProfilePage } from '../pages/set-profile/set-profile';
 import { PurchaseListPage } from '../pages/purchase-list/purchase-list';
 import { ExtraMoneyPage } from '../pages/extra-money/extra-money';
 import { PurchaseEntryPage } from '../pages/purchase-entry/purchase-entry';
@@ -30,7 +31,7 @@ export const firebaseConfig = {
   storageBucket: "budget-manager-34163.appspot.com",
   messagingSenderId: "394432996728"
 };
-//----------
+//---------- 
 
 @NgModule({
   declarations: [ 
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     SignUpPage,
     SetBudgetPage,
     ExtraMoneyPage,
+    SetProfilePage,
     PurchaseListPage,
     PurchaseEntryPage,
     NewIncomeModalPage,
@@ -62,6 +64,7 @@ export const firebaseConfig = {
     SignInPage,
     SignUpPage,
     SetBudgetPage,
+    SetProfilePage,
     ExtraMoneyPage,
     PurchaseListPage,
     PurchaseEntryPage,

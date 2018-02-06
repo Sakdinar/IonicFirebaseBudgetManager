@@ -5,4 +5,11 @@
     <button ion-button id='buttons' (click)='presentModal("income")'>Income</button>
     <button ion-button id='buttons' (click)='presentModal("expense")'>Purchase</button>
   </div>
+
+  <ion-fab right top>
+    <button ion-fab color='primary'><ion-icon name="arrow-dropdown"></ion-icon></button>
+    <ion-fab-list side="down">
+      <button ion-fab (click)='signOut()'><ion-icon name="log-out"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

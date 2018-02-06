@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController, Events } from 'io
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 
+import { HomePage } from '../home/home';
 import { NewIncomeModalPage } from '../new-income-modal/new-income-modal';
 import { NewPurchaseModalPage } from '../new-purchase-modal/new-purchase-modal';
 
@@ -99,6 +100,16 @@ export class PurchaseEntryPage {
     } else {
       this.filteredPurchases = this.transactions;
     }
+  }
+
+  signOut() {
+    this.angFireAuth
+      .auth
+      .signOut()
+      .then(() => this.navCtrl.push(HomePage))
+      .catch(err => {
+        console.log("SIGN OUT ERROR", err);
+      })
   }
 
 }

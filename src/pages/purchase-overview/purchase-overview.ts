@@ -29,7 +29,11 @@ export class PurchaseOverviewPage {
     let total = 0;
     for (let i=0; i<this.transactions.length; i++) {
       let thisAmount = this.transactions[i].amount;
-      total += thisAmount;
+      if (this.transactions[i].type == 'expense') {
+        total -= thisAmount;
+      } else {
+        total += thisAmount;
+      }
     }
 
     this.totalSpent = total;

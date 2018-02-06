@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-import { MainPage } from '../main/main';
+import { SetProfilePage } from '../set-profile/set-profile';
 
 @IonicPage()
 @Component({
@@ -24,7 +24,7 @@ export class SignUpPage {
     this.angFireAuth
       .auth
       .createUserWithEmailAndPassword(this.email, this.password)
-      .then(() => this.navCtrl.push(MainPage))
+      .then(() => this.navCtrl.push(SetProfilePage))
       .catch(err => {
         console.log("SIGN UP ERROR", err);
       })

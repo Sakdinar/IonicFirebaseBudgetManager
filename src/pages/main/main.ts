@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 
-import { SignInPage } from '../sign-in/sign-in';
+import { HomePage } from '../home/home';
 import { SetBudgetPage } from '../set-budget/set-budget';
 import { ExtraMoneyPage } from '../extra-money/extra-money';
 import { PurchaseListPage } from '../purchase-list/purchase-list';
@@ -50,7 +50,7 @@ export class MainPage {
       .auth
       .onAuthStateChanged(user => {
         if (!user) {
-          this.navCtrl.push(SignInPage);
+          this.navCtrl.push(HomePage);
         } else {
           const thisUser = this.angFireAuth.auth.currentUser;
           const uid = thisUser.uid;
