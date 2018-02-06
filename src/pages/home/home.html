@@ -1,14 +1,44 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Budget Manager
     </ion-title>
-  </ion-navbar>
+  </ion-navbar> 
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-slides pager>
+    <ion-slide>
+      <div class='diag'>
+        <ion-icon name='beer' color='primary'></ion-icon>
+      </div>
+      <div>
+        <h2>Welcome to Budget Manager</h2>
+        <p>stop wasting money</p>
+        <div>
+          <button ion-button (click)='redirect("SignInPage")' color='primary' class='userAuthButtons'>Sign In</button>
+          <button ion-button (click)='redirect("SignUpPage")' color='primary' class='userAuthButtons'>Sign Up</button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class='diag'>
+        <ion-icon ios='ios-build' md='md-build' color='primary'></ion-icon>
+      </div>
+      <div>
+        <h2>Customize Your Budget</h2>
+        <p>Change your budget to fit your lifestyle and income.</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class='diag'>
+        <ion-icon ios='ios-bulb' md='md-bulb' color='primary'></ion-icon>
+      </div>
+      <div>
+        <h2>Budget Intelligently</h2>
+        <p>Find the best way to budget your income.</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>

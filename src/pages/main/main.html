@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Budget Manager</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-tabs selectedIndex="2">
+    <ion-tab tabIcon="options" [root]="setBudget" [rootParams]="userInfo"></ion-tab>
+    <ion-tab tabIcon="list" [root]='purchaseList' [rootParams]="userInfo"></ion-tab>
+    <ion-tab tabIcon="add-circle" [root]="purchaseEntry" [rootParams]="userInfo"></ion-tab>
+    <ion-tab tabIcon="stats" [root]="purchaseOverview" [rootParams]="userInfo"></ion-tab>
+    <ion-tab tabIcon="beer" [root]="extraMoney" [rootParams]="userInfo"></ion-tab>
+  </ion-tabs>
+</ion-content> 

@@ -1,0 +1,40 @@
+<ion-content padding>
+    <ion-title>Set Your Budget</ion-title>
+
+    <ion-list>
+        <ion-list-header>
+            Income
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Yearly Income</ion-label>
+            <ion-input type='number' placeholder='{{ income }}'></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            Expenses
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Bills</ion-label>
+            <ion-input type='number' value='budget.bills' placeholder='{{ budget.bills }}'></ion-input> 
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Food</ion-label>
+            <ion-input type='number' value='budget.food' placeholder='{{ budget.food }}'></ion-input> 
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Savings</ion-label>
+            <ion-input type='number' value='budget.savings' placeholder='{{ budget.savings }}'></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Spending</ion-label>
+            <ion-input type='number' value='budget.beerFund' placeholder='{{ budget.beerFund }}'></ion-input>
+        </ion-item> 
+    </ion-list>
+
+    <button ion-button id='submitButton' (click)='updateBudget()'>Update Budget</button>
+</ion-content>

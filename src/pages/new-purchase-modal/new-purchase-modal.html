@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add New Purchase</ion-title>
+    <span ion-text color='primary' showWhen='ios' (click)='dismiss()'>Cancel</span>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id='modalContents'>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-input type='date' [(ngModel)]='newPurchase.date'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]='newPurchase.category'>
+        <ion-option value='food'>Food</ion-option>
+        <ion-option value='bills'>Bills</ion-option>
+        <ion-option value='savings'>Savings</ion-option> 
+        <ion-option value='beerFund'>Some shit you don't need</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Purchase Name</ion-label>
+      <ion-input type='text' [(ngModel)]='newPurchase.name'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-input type='number' [(ngModel)]='newPurchase.amount'></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color='primary' (click)='submitNewPurchase()'>Submit Purchase</button>
+</ion-content>

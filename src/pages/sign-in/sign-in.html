@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class='signInPage'>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type='text' [(ngModel)]='email'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type='password' [(ngModel)]='password'></ion-input>
+  </ion-item>
+
+  <button ion-button id='signInButton' color='primary' (click)='handleSignIn()'>Sign In</button>
+</ion-content>

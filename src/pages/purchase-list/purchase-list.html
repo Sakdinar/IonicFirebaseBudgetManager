@@ -1,0 +1,37 @@
+<ion-content>
+  <ion-title>Your Purchases</ion-title>
+
+  <ion-item>
+    <ion-label>Filter</ion-label>
+    <ion-select [(ngModel)]='selectedFilter' (ionChange)='setFilter($event)'>
+      <ion-option value='none'>No Filter</ion-option>
+      <ion-option value='food'>Food</ion-option>
+      <ion-option value='bills'>Bills</ion-option>
+      <ion-option value='savings'>Savings</ion-option> 
+      <ion-option value='beerFund'>Some shit you don't need</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list id='purchaseList'>
+    <ion-grid>
+      <ion-row *ngFor='let purchase of filteredPurchases'>
+        <ion-item>
+          <ion-col col-2>
+            {{ purchase.date }}
+          </ion-col>
+          <ion-col col-4>
+            {{ purchase.category }}
+          </ion-col>
+          <ion-col col-3>
+            {{ purchase.name }}
+          </ion-col>
+          <ion-col col-3>
+            <div text-right>
+              ${{ purchase.amount }}
+            </div>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
