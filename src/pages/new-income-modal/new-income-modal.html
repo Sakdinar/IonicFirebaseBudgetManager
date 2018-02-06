@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Reimbursement</ion-title>
+    <span ion-text color='primary' showWhen='ios' (click)='dismiss()'>Cancel</span>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id='modalContents'>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]='newIncome.date'></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Purchase Name</ion-label>
+      <ion-input type='text' [(ngModel)]='newIncome.name'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-input type='number' [(ngModel)]='newIncome.amount'></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color='primary' (click)='submitNewIncome()'>Submit Purchase</button>
+</ion-content>
+

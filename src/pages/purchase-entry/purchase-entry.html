@@ -2,7 +2,7 @@
   <ion-title id='title'>Spent more money?</ion-title>
 
   <div>
-    <button ion-button id='buttons'>Income</button>
-    <button ion-button id='buttons' (click)='presentModal()'>Purchase</button>
+    <button ion-button id='buttons' (click)='presentModal("income")'>Income</button>
+    <button ion-button id='buttons' (click)='presentModal("expense")'>Purchase</button>
   </div>
 </ion-content>

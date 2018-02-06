@@ -13,6 +13,7 @@ import { SetBudgetPage } from '../pages/set-budget/set-budget';
 import { PurchaseListPage } from '../pages/purchase-list/purchase-list';
 import { ExtraMoneyPage } from '../pages/extra-money/extra-money';
 import { PurchaseEntryPage } from '../pages/purchase-entry/purchase-entry';
+import { NewIncomeModalPage } from '../pages/new-income-modal/new-income-modal';
 import { PurchaseOverviewPage } from '../pages/purchase-overview/purchase-overview';
 import { NewPurchaseModalPage } from '../pages/new-purchase-modal/new-purchase-modal';
 
@@ -42,6 +43,7 @@ export const firebaseConfig = {
     ExtraMoneyPage,
     PurchaseListPage,
     PurchaseEntryPage,
+    NewIncomeModalPage,
     PurchaseOverviewPage,
     NewPurchaseModalPage
   ],
@@ -63,6 +65,7 @@ export const firebaseConfig = {
     ExtraMoneyPage,
     PurchaseListPage,
     PurchaseEntryPage,
+    NewIncomeModalPage,
     PurchaseOverviewPage,
     NewPurchaseModalPage
   ],

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 
@@ -27,6 +27,7 @@ export class MainPage {
 
 
   constructor(
+    public events: Events,
     public navParams: NavParams,
     public navCtrl: NavController, 
     public angFireAuth: AngularFireAuth,
@@ -38,6 +39,10 @@ export class MainPage {
     this.purchaseList = PurchaseListPage;
     this.purchaseEntry = PurchaseEntryPage;
     this.purchaseOverview = PurchaseOverviewPage;
+
+    events.subscribe('purchases:created', (data) => {
+      this.fetchUserData();
+    })
   }
 
   fetchUserData() {

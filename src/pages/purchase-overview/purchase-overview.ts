@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,14 +15,9 @@ export class PurchaseOverviewPage {
   totalFood;
   totalMisc;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.budget = navParams.data.userInfo.budget.budget;
     this.transactions = navParams.data.transactions;
-
-    events.subscribe('purchases:created', (data) => {
-      this.transactions = data;
-      this.calculateTotalSpent();
-    })
   }
 
   ionViewWillEnter() {
